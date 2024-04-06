@@ -630,6 +630,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .flex {
   display: flex;
 }
@@ -701,6 +705,14 @@ video {
 .columns-1 {
   -moz-columns: 1;
        columns: 1;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -830,6 +842,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .pt-2 {
