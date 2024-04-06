@@ -919,6 +919,11 @@ video {
     -moz-columns: 3;
          columns: 3;
   }
+
+  .lg\:columns-2 {
+    -moz-columns: 2;
+         columns: 2;
+  }
 }
 
 .\[\&\>svg\]\:h-5>svg {
