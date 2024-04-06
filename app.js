@@ -3,5 +3,5 @@ const menu = document.querySelector("#menu")
 
 menubtn.addEventListener("click", ()=>{
     menu.classList.toggle("hidden")
-    menu.classList.toggle("bg-red")
+    menu.classList.toggle("")
 })
