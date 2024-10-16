@@ -622,6 +622,10 @@ video {
   margin: 0.5rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -966,6 +970,10 @@ video {
   padding: 2rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -994,6 +1002,10 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .font-nunito {
