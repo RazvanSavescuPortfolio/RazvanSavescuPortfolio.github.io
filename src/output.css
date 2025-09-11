@@ -2,8 +2,6 @@
 @layer properties;
 :root, :host {
   --color-white: #ffffff;
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F3F4F6;
   --color-gray-200: #E5E7EB;
   --color-gray-300: #D1D5DB;
   --color-gray-400: #9CA3AF;
@@ -12,36 +10,22 @@
   --color-gray-700: #374151;
   --color-gray-800: #1F2937;
   --color-gray-900: #111827;
-  --color-yellow-400: #FBBF24;
   --color-blue-100: #DBEAFE;
   --color-blue-300: #93C5FD;
   --color-blue-500: #3B82F6;
   --color-blue-600: #2563EB;
   --color-blue-800: #1E40AF;
   --color-blue-900: #1E3A8A;
-  --color-indigo-700: #4338CA;
-  --color-indigo-900: #312E81;
   --color-purple-900: #4C1D95;
-  --color-cyan-900: #164E63;
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-  --color-amber-50: oklch(98.7% 0.022 95.277);
-  --color-amber-800: oklch(47.3% 0.137 46.201);
-  --color-amber-950: oklch(27.9% 0.077 45.635);
-  --color-emerald-800: oklch(43.2% 0.095 166.913);
-  --color-emerald-950: oklch(26.2% 0.051 172.552);
   --color-cyan-950: oklch(30.2% 0.056 229.695);
   --color-sky-900: oklch(39.1% 0.09 240.876);
   --color-sky-950: oklch(29.3% 0.066 243.157);
-  --color-fuchsia-950: oklch(29.3% 0.136 325.661);
-  --color-slate-100: oklch(96.8% 0.007 247.896);
-  --color-slate-600: oklch(44.6% 0.043 257.281);
-  --color-slate-900: oklch(20.8% 0.042 265.755);
   --spacing: 0.25rem;
   --container-2xl: 42rem;
-  --container-6xl: 72rem;
   --text-sm: 0.875rem;
   --text-sm--line-height: calc(1.25 / 0.875);
   --text-base: 1rem;
@@ -56,9 +40,7 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --radius-sm: 0.25rem;
   --radius-lg: 0.5rem;
-  --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 0.15);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --aspect-video: 16 / 9;
   --default-transition-duration: 150ms;
