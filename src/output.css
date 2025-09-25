@@ -46,6 +46,7 @@
   --font-weight-bold: 700;
   --radius-sm: 0.25rem;
   --radius-lg: 0.5rem;
+  --radius-2xl: 1rem;
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --aspect-video: 16 / 9;
   --default-transition-duration: 150ms;
@@ -1221,6 +1222,9 @@
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
   .h-2 {
     height: calc(var(--spacing) * 2);
   }
@@ -1438,8 +1442,14 @@
   .resize {
     resize: both;
   }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -1491,6 +1501,9 @@
   }
   .scroll-smooth {
     scroll-behavior: smooth;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -1806,6 +1819,9 @@
   .px-12 {
     padding-inline: calc(var(--spacing) * 12);
   }
+  .px-\[5\%\] {
+    padding-inline: 5%;
+  }
   .px-\[10\%\] {
     padding-inline: 10%;
   }
@@ -1820,6 +1836,12 @@
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .py-\[10\%\] {
+    padding-block: 10%;
+  }
+  .py-\[20\%\] {
+    padding-block: 20%;
   }
   .search-filtering-row {
     .datatable-wrapper .datatable-container thead tr& th {
