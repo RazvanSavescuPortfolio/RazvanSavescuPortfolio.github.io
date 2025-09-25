@@ -466,6 +466,12 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-\[1\%\] {
+    padding-inline: 1%;
+  }
+  .px-\[2\%\] {
+    padding-inline: 2%;
+  }
   .px-\[5\%\] {
     padding-inline: 5%;
   }
@@ -779,6 +785,11 @@
   .md\:p-0 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
   .lg\:grid-cols-4 {
