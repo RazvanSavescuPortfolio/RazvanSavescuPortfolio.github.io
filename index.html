@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./src/output.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/output.css" >
+    
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+<script src="./main.js"></script>
     <title>Răzvan Savescu Portfolio</title>
 </head>
 <body class="bg-gradient-to-b from-gray-900  via-sky-950 to-gray-900 font-sans m-0 min-h-screen">
@@ -93,10 +101,14 @@
 <section class="p-4">
     <section class="grid grid-cols-2 md:grid-cols-4 gap-2">
         <div class="hover:scale-101 duration-200">
-            <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/bachelor/Bachelor's project_1.jpg" alt="">
+            <a a data-fancybox href="./images/bachelor/Bachelor's project_1.jpg">
+                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/bachelor/Bachelor's project_1.jpg" alt="">
+            </a>
         </div>
         <div class="hover:scale-101 duration-200">
-            <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/gallery/Artwork_cubes.webp" alt="">
+            <a data-fancybox href="./images/gallery/Artwork_cubes.webp">
+                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/gallery/Artwork_cubes.webp" alt="">
+            </a>
         </div>
         <div class="hover:scale-101 duration-200">
             <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/gallery/Artwork_cyber_girl.webp" alt="">
@@ -166,5 +178,11 @@
         </li>
     </ul>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
+    </script>
 </body>
 </html>
