@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"/>
 
     <title>Răzvan Savescu Portfolio</title>
+    <style>
+        @keyframes flyin {
+            from {
+    transform: scale(0.95); /* micșorat un pic */
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body class="bg-slate-900 font-sans m-0 min-h-screen">
 
 <!--npx @tailwindcss/cli -i ./input.css -o ./src/output.css --watch   -->
 
 <!--NAV BAR-->
-<nav class="text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium p-4">
+<nav class="animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium p-4">
      <!--Left section-->
     <a href="https://www.linkedin.com/in/razvan-savescu/" class="flex items-center space-x-3 rtl:space-x-reverse ">
         <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
@@ -33,7 +45,8 @@
 </nav>
 
 <!--About me/timeline-->
-<section class="p-2 grid sm:grid-cols-1 lg:grid-cols-2 gap-2 font-medium">
+<section class="animate-[flyin_0.5s_ease-out_forwards] p-2 grid sm:grid-cols-1 lg:grid-cols-2 gap-2 font-medium ">
+    
     <section class="px-[1%] content-center">
         <ol class="grid sm:grid-cols-1 gap-2 lg:px-12 sm:px-0">
             <li class="p-2">
@@ -93,7 +106,7 @@
 </section>
 
 <!--3D-->
-<section class="p-2">
+<section class="p-2 animate-[flyin_0.5s_ease-out_forwards]">
     <section class="grid grid-cols-2 md:grid-cols-4 gap-2">
         <div class="hover:scale-101 duration-200">
             <a a data-fancybox href="./images/bachelor/Bachelor's project_1.jpg">
