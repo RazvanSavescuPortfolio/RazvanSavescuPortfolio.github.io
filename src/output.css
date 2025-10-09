@@ -270,6 +270,9 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
   .space-x-3 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;

@@ -23,7 +23,7 @@
 
     </head>
 
-    <body class="bg-slate-900 font-sans m-0 min-h-screen">
+    <body class="flex flex-col p-2 gap-4 m-0 min-h-screen bg-slate-900 font-sans">
 
         <!--npx @tailwindcss/cli -i ./input.css -o ./src/output.css --watch   -->
 
@@ -48,9 +48,9 @@
         </nav>
 
         <!--About me/timeline-->
-        <section class="animate-[flyin_0.5s_ease-out_forwards] gap-2 p-2 grid sm:grid-cols-1 lg:grid-cols-2 font-medium">
+        <section class="animate-[flyin_0.5s_ease-out_forwards] gap-2 grid sm:grid-cols-1 lg:grid-cols-2 font-medium">
 
-            <section class="px-[1%] content-center">
+            <section class=" content-center">
                 <ol class="grid gap-4 sm:grid-cols-1 lg:px-12">
                     <li>
                         <div class="flex flex-row gap-2 text-gray-300">
@@ -112,7 +112,7 @@
         </section>
 
         <!--3D-->
-        <section class="grid grid-cols-2 md:grid-cols-4 gap-2 p-2 animate-[flyin_0.5s_ease-out_forwards] ">
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-2 animate-[flyin_0.5s_ease-out_forwards] ">
 
                 <div class="hover:scale-101 duration-200">
                     <a a data-fancybox href="./images/project_1.webp">
@@ -179,7 +179,7 @@
         </section>
 
         <!--Socials Footer-->
-        <footer class="text-gray-300 flex p-4 w-full justify-center" id="contact">
+        <footer class="text-gray-300 flex w-full justify-center" id="contact">
 
             <ul class="font-medium flex flex-col md:flex-row md:space-x-8 items-center">
 
