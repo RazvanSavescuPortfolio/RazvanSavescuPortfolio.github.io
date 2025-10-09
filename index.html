@@ -1,220 +1,227 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth"> 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./src/output.css" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"/>
+        <link rel="stylesheet" href="./src/output.css" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"/>
 
-    <title>Răzvan Savescu Portfolio</title>
-    <style>
+        <title>Răzvan Savescu Portfolio</title>
+
+        <style>
         @keyframes flyin {
             from {
-    transform: scale(0.95); /* micșorat un pic */
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
+                transform: scale(0.95);
+                opacity: 0;
+            }to {
+                transform: scale(1);
+                opacity: 1;
             }
         }
-    </style>
-</head>
-<body class="bg-slate-900 font-sans m-0 min-h-screen">
+        </style>
 
-<!--npx @tailwindcss/cli -i ./input.css -o ./src/output.css --watch   -->
+    </head>
 
-<!--NAV BAR-->
-<nav class="animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium p-4">
-     <!--Left section-->
-    <a href="https://www.linkedin.com/in/razvan-savescu/" class="flex items-center space-x-3 rtl:space-x-reverse ">
-        <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-            <span class="self-center">RĂZVAN SAVESCU</span>
-        </div>
-    </a>
+    <body class="bg-slate-900 font-sans m-0 min-h-screen">
 
-    <!--Right section-->
-        <div class="flex justify-end"> 
-            <a href="#contact">
+        <!--npx @tailwindcss/cli -i ./input.css -o ./src/output.css --watch   -->
+
+        <!--NAV BAR-->
+        <nav class="animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium p-4">
+
+            <!--Left section-->
+            <a href="https://www.linkedin.com/in/razvan-savescu/" class="flex items-center space-x-3 rtl:space-x-reverse ">
                 <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                    <p>SOCIALS</p>
+                    <span class="self-center">RĂZVAN SAVESCU</span>
                 </div>
             </a>
-        </div>
-</nav>
 
-<!--About me/timeline-->
-<section class="animate-[flyin_0.5s_ease-out_forwards] p-2 grid sm:grid-cols-1 lg:grid-cols-2 gap-2 font-medium ">
-    
-    <section class="px-[1%] content-center">
-        <ol class="grid sm:grid-cols-1 gap-2 lg:px-12 sm:px-0">
-            <li class="p-2">
-                <div class="flex flex-row gap-2 text-gray-300">
-                    <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
-                    <p>2016</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white disc">Made my first 3D model sale on CGTrader at 16</h3>
-                    <p class="text-base text-gray-500 dark:text-gray-400">Started experimenting with Blender at 14.</p>
-                </div>
-            </li>
-
-            <li class="p-2">
-                <div class="flex items-center">
-                    <div class="flex flex-row gap-2 text-gray-300 ">
-                    <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
-                        <p>2020</p>
+            <!--Right section-->
+            <div class="flex justify-end"> 
+                <a href="#contact">
+                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                        <p>SOCIALS</p>
                     </div>
+                </a>
+            </div>
+        </nav>
+
+        <!--About me/timeline-->
+        <section class="animate-[flyin_0.5s_ease-out_forwards] gap-2 p-2 grid sm:grid-cols-1 lg:grid-cols-2 font-medium">
+
+            <section class="px-[1%] content-center">
+                <ol class="grid gap-4 sm:grid-cols-1 lg:px-12">
+                    <li>
+                        <div class="flex flex-row gap-2 text-gray-300">
+                            <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
+                            <p>2016</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white disc">Made my first 3D model sale on CGTrader at 16</h3>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Started experimenting with Blender at 14.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex items-center">
+                            <div class="flex flex-row gap-2 text-gray-300 ">
+                            <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
+                                <p>2020</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Published 3D Android Game (4 months, Erasmus+)</h3>
+                            <p class="text-base text-gray-500 dark:text-gray-400">Oulu GameLab - created 3D models, animations, rigging, and UV maps in Blender; final game developed in Unity.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex items-center">
+                            <div class="flex flex-row gap-2 text-gray-300 ">
+                            <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
+                                <p>2022</p>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Bachelor's in Design (3 years)</h3>
+                            <p class="text-base text-gray-500 dark:text-gray-400">West University of Timișoara - 3D game concept made with Unreal Engine 5, Blender, ZBrush, Substance Painter, Krita.</p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="flex items-center">
+                            <div class="flex flex-row gap-2 text-gray-300 ">
+                            <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
+                                <p>2025</p>
+                            </div>
+                        </div>
+                    <div>
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">UX/UI Course (4 months)</h3>
+                            <p class="text-base text-gray-500 dark:text-gray-400">IT SCHOOL - Completed accredited UX/UI course.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+                <!--UX-->
+                <div class="hover:scale-101 duration-200 grid w-full content-center">
+                    <iframe class="object-cover shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)] w-full max-w-[600px] mx-auto" src="https://www.behance.net/embed/project/231328305?ilo0=1" height="500" scrolling="no" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin" scrollbar="no"></iframe>
+                </div>    
+
+        </section>
+
+        <!--3D-->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-2 p-2 animate-[flyin_0.5s_ease-out_forwards] ">
+
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/project_1.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/project_1.webp" alt="">
+                    </a>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Published 3D Android Game (4 months, Erasmus+)</h3>
-                    <p class="text-base text-gray-500 dark:text-gray-400">Oulu GameLab - created 3D models, animations, rigging, and UV maps in Blender; final game developed in Unity.</p>
+
+                <div class="hover:scale-101 duration-200">
+                    <a data-fancybox href="./images/Artwork_cubes.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_cubes.webp" alt="">
+                    </a>
                 </div>
-            </li>
 
-            <li class="p-2">
-                <div class="flex items-center">
-                    <div class="flex flex-row gap-2 text-gray-300 ">
-                    <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
-                        <p>2022</p>
-                    </div>
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/Artwork_cyber_girl.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_cyber_girl.webp" alt="">
+                    </a>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Bachelor's in Design (3 years)</h3>
-                    <p class="text-base text-gray-500 dark:text-gray-400">West University of Timișoara - 3D game concept made with Unreal Engine 5, Blender, ZBrush, Substance Painter, Krita.</p>
+
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/artwork_girl.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/artwork_girl.webp" alt="">
+                    </a>
                 </div>
-            </li>
 
-            <li class="p-2">
-                <div class="flex items-center">
-                    <div class="flex flex-row gap-2 text-gray-300 ">
-                    <div class="flex items-center justify-center w-0.5 bg-gray-300 rounded-2xl"></div>
-                        <p>2025</p>
-                    </div>
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/Artwork_heart.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_heart.webp" alt="">
+                    </a>
                 </div>
-            <div>
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">UX/UI Course (4 months)</h3>
-                    <p class="text-base text-gray-500 dark:text-gray-400">IT SCHOOL - Completed accredited UX/UI course.</p>
+
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/Artwork_shadows.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_shadows.webp" alt="">
+                    </a>
                 </div>
-            </li>
-        </ol>
-    </section>
-        <div class="hover:scale-101 duration-200 grid w-full content-center">
-            <iframe class="object-cover shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)] w-full max-w-[600px] mx-auto" src="https://www.behance.net/embed/project/231328305?ilo0=1" height="500" scrolling="no" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin" scrollbar="no"></iframe>
-        </div>    
-</section>
 
-<!--3D-->
-<section class="p-2 animate-[flyin_0.5s_ease-out_forwards]">
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-2">
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/project_1.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/project_1.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a data-fancybox href="./images/Artwork_cubes.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_cubes.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/Artwork_cyber_girl.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_cyber_girl.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/artwork_girl.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/artwork_girl.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/Artwork_heart.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_heart.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/Artwork_shadows.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_shadows.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/artwork_spirall.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/artwork_spirall.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/Artwork_stylized_core.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_stylized_core.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <a a data-fancybox href="./images/toon_shader.webp">
-                <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/toon_shader.webp" alt="">
-            </a>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <iframe loading="lazy" class="object-cover h-96 w-full rounded-lg aspect-video shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" title="Sci-fi Girl" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed"> </iframe>
-        </div>
-
-        <div class="hover:scale-101 duration-200">
-            <iframe loading="lazy" class="object-cover h-96 w-full rounded-lg aspect-video shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
-        </div>
-    </section>
-</section>
-
-
-
-<!--Socials Footer-->
-<footer class="text-gray-300 flex p-4 w-full justify-center" id="contact">
-    <ul class="font-medium flex flex-col md:flex-row md:space-x-8 items-center">
-        <li class="flex justify-end p-2"> 
-            <a href="https://www.linkedin.com/in/razvan-savescu/">
-                <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                    <p>LINKEDIN</p>
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/artwork_spirall.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/artwork_spirall.webp" alt="">
+                    </a>
                 </div>
-            </a>
-        </li>
 
-        <li class="flex justify-end p-2"> 
-            <a href="https://sketchfab.com/razvansavescu/models">
-                <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                    <p>SKETCHFAB</p>
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/Artwork_stylized_core.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/Artwork_stylized_core.webp" alt="">
+                    </a>
                 </div>
-            </a>
-        </li>
 
-        <li class="flex justify-end p-2"> 
-            <a href="https://www.behance.net/razvansavescu">
-                <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                    <p>BEHANCE</p>
+                <div class="hover:scale-101 duration-200">
+                    <a a data-fancybox href="./images/toon_shader.webp">
+                        <img loading="lazy" class="object-cover h-96 w-full rounded-lg shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" src="./images/toon_shader.webp" alt="">
+                    </a>
                 </div>
-            </a>
-        </li>
 
-        <li class="flex justify-end p-2"> 
-            <a href="https://www.cgtrader.com/designers/friendlycapybara">
-                <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                    <p>CGTRADER</p>
+                <div class="hover:scale-101 duration-200">
+                    <iframe loading="lazy" class="object-cover h-96 w-full rounded-lg aspect-video shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" title="Sci-fi Girl" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed"> </iframe>
                 </div>
-            </a>
-        </li>
-    </ul>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-      Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-      });
-    </script>
-</body>
+
+                <div class="hover:scale-101 duration-200">
+                    <iframe loading="lazy" class="object-cover h-96 w-full rounded-lg aspect-video shadow-[0px_15px_24px_-11px_rgba(0,_0,_0,_0.5)]" title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
+                </div>
+
+        </section>
+
+        <!--Socials Footer-->
+        <footer class="text-gray-300 flex p-4 w-full justify-center" id="contact">
+
+            <ul class="font-medium flex flex-col md:flex-row md:space-x-8 items-center">
+
+                <li class="flex justify-end p-2"> 
+                    <a href="https://www.linkedin.com/in/razvan-savescu/">
+                        <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                            <p>LINKEDIN</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="flex justify-end p-2"> 
+                    <a href="https://sketchfab.com/razvansavescu/models">
+                        <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                            <p>SKETCHFAB</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="flex justify-end p-2"> 
+                    <a href="https://www.behance.net/razvansavescu">
+                        <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                            <p>BEHANCE</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="flex justify-end p-2"> 
+                    <a href="https://www.cgtrader.com/designers/friendlycapybara">
+                        <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+                            <p>CGTRADER</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+
+        <script> Fancybox.bind("[data-fancybox]", {}); </script>
+
+    </body>
+
 </html>
