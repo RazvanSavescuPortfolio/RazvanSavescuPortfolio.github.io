@@ -311,9 +311,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .px-\[1\%\] {
-    padding-inline: 1%;
-  }
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -531,11 +528,6 @@
   .sm\:grid-cols-1 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  }
-  .sm\:px-0 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:grid-cols-4 {
