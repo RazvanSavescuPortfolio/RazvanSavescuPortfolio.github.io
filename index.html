@@ -11,7 +11,7 @@
 
         <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch   -->
         <!--NAV BAR-->
-        <nav class="sticky top-0 z-[100] border-b border-slate-800 animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-900">
+        <nav class="sticky top-0 z-[100] animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-900">
 
             <!--NAME-->
             <a href="index.html" class="ml-2 flex items-center space-x-3 rtl:space-x-reverse ">
@@ -116,108 +116,115 @@
             </div>
         </nav>
 
-        <!--portfolio-->
-        <section class="relative">
-            <div class="sticky top-[60px] z-[50] bg-slate-950/80 backdrop-blur-sm border-b border-slate-800 p-4">
-                <h2 class="text-xl tracking-widest text-white">3D</h2>
+        <!--3D-->
+        <section>
+            <!--Title-->
+            <div class="relative border-b border-t border-slate-800">
+                <div class="sticky top-[60px] z-[50] bg-slate-950/80 backdrop-blur-sm p-4">
+                    <h2 class="text-xl tracking-widest text-white">3D</h2>
+                </div>
+                <div class="grid grid-cols-1 rounded md:grid-cols-2 lg:grid-cols-4 gap-4">
+                </div>
             </div>
+            
+            <!--Content-->
+            <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] " id="3D"> 
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/project_1.webp" class="block">
+                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/project_1.webp" alt="">
+                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+                            <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                                Bachelor's Project
+                            </span>
+                            </div>
+                        </a>
+                    </div>
 
-            <div class="grid grid-cols-1 rounded md:grid-cols-2 lg:grid-cols-4 gap-4">
-            </div>
+                    <div class="relative group hover transition-transform duration-200">
+                        <a data-fancybox href="./images/Artwork_cubes.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cubes.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/Artwork_cyber_girl.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cyber_girl.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/artwork_girl.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_girl.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/Artwork_heart.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_heart.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/Artwork_shadows.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_shadows.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/artwork_spirall.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_spirall.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/Artwork_stylized_core.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_stylized_core.webp" alt="">
+                        </a>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <a a data-fancybox href="./images/toon_shader.webp">
+                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/toon_shader.webp" alt="">
+                        </a>
+                    </div>
+                    <!--Sketchfab-->
+                    <div class="relative group hover transition-transform duration-200">
+                        <iframe class="object-cover h-96 w-full aspect-video " title="Sci-fi Girl" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed"> </iframe>
+                    </div>
+
+                    <div class="relative group hover transition-transform duration-200">
+                        <iframe class="object-cover h-96 w-full aspect-video " title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
+                    </div>
+                </content>
         </section>
-        <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards]" id="3D"> 
-                <!--3D-->
-                <div class="relative group hover transition-transform duration-200">
-                    <a a data-fancybox href="./images/project_1.webp" class="block">
-                    <img loading="lazy" class="object-cover h-96 w-full " src="./images/project_1.webp" alt="">
-                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                        <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            Check Project
-                        </span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a data-fancybox href="./images/Artwork_cubes.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cubes.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/Artwork_cyber_girl.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cyber_girl.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/artwork_girl.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_girl.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/Artwork_heart.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_heart.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/Artwork_shadows.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_shadows.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/artwork_spirall.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_spirall.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/Artwork_stylized_core.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_stylized_core.webp" alt="">
-                    </a>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <a a data-fancybox href="./images/toon_shader.webp">
-                        <img loading="lazy" class="object-cover h-96 w-full " src="./images/toon_shader.webp" alt="">
-                    </a>
-                </div>
-                <!--Sketchfab-->
-                <div class="hover:scale-101 duration-200">
-                    <iframe class="object-cover h-96 w-full aspect-video " title="Sci-fi Girl" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed"> </iframe>
-                </div>
-
-                <div class="hover:scale-101 duration-200">
-                    <iframe class="object-cover h-96 w-full aspect-video " title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
-                </div>
-            </content>
 
         <!--UX-->
-        <section class="relative">
-            <div class="sticky top-[60px] z-[50] bg-slate-950/80 backdrop-blur-sm border-b border-slate-800 p-4">
-                <h2 class="text-xl tracking-widest text-white">UX</h2>
-            </div>
-
+        <section>
+        <!--Title-->
+            <div class="relative border-b border-t border-slate-800 ">
+                <div class="sticky top-[60px] z-[50] bg-slate-950/80 backdrop-blur-sm p-4">
+                    <h2 class="text-xl tracking-widest text-white">UX</h2>
+                </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 </div>
-        </section>
-        <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] rounded-none overflow-hidden" id="ux"> 
-            <div class="overflow-hidden rounded-none">
-                <iframe class="object-cover h-96 w-full aspect-video scale-102" 
-                src="https://www.behance.net/embed/project/231328305?ilo0=1" 
-                height="500" scrolling="no">
-                </iframe>
-            </div>    
-            <div class="overflow-hidden rounded-none">
-                <iframe class="object-cover h-96 w-full aspect-video scale-102" 
-                src="https://www.behance.net/embed/project/237519189?ilo0=1" 
-                scrolling="no">
-                </iframe>
             </div>
-        </content>
+
+            <!--Content-->
+            <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] rounded-none overflow-hidden" id="ux"> 
+                <div class="overflow-hidden rounded-none">
+                    <iframe class="object-cover h-96 w-full aspect-video scale-102" 
+                    src="https://www.behance.net/embed/project/231328305?ilo0=1" 
+                    height="500" scrolling="no">
+                    </iframe>
+                </div>    
+                <div class="overflow-hidden rounded-none">
+                    <iframe class="object-cover h-96 w-full aspect-video scale-102" 
+                    src="https://www.behance.net/embed/project/237519189?ilo0=1" 
+                    scrolling="no">
+                    </iframe>
+                </div>
+            </content>
+        </section>
 
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
         <script> Fancybox.bind("[data-fancybox]", {}); </script>
