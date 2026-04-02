@@ -121,7 +121,7 @@
                 </ul>
             </div>
         </nav>
-
+        <!--Projects-->
         <section>
             <!--Title-->
             <div class="flex items-center gap-6 p-4 w-full">
@@ -172,68 +172,67 @@
                 </div>
             </content>
         </section>
-<section>
-    
+
+        <!--Artworks-->
+        <section>
             <!--Title-->
             <div class="flex items-center gap-6 p-4 w-full">
                     <h2 class="text-xl text-white">Artworks</h2>
                     <div class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
             </div>
             <!--Content-->
-            <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] " id="3D"> 
- 
-
+            <content class="grid grid-cols-2 md:grid-cols-4" id="3D"> 
                     <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox href="./images/Artwork_cubes.webp">
+                        <a data-fancybox="b" href="./images/Artwork_cubes.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cubes.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/Artwork_cyber_girl.webp">
+                        <a data-fancybox="b"href="./images/Artwork_cyber_girl.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cyber_girl.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/artwork_girl.webp">
+                        <a data-fancybox="b" href="./images/artwork_girl.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_girl.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/Artwork_heart.webp">
+                        <a data-fancybox="b" href="./images/Artwork_heart.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_heart.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/Artwork_shadows.webp">
+                        <a data-fancybox="b" href="./images/Artwork_shadows.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_shadows.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/artwork_spirall.webp">
+                        <a data-fancybox="b" href="./images/artwork_spirall.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_spirall.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/Artwork_stylized_core.webp">
+                        <a data-fancybox="b" href="./images/Artwork_stylized_core.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_stylized_core.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
                     </div>
 
                     <div class="relative group hover transition-transform duration-200">
-                        <a a data-fancybox href="./images/toon_shader.webp">
+                        <a data-fancybox="b" href="./images/toon_shader.webp">
                             <img loading="lazy" class="object-cover h-96 w-full " src="./images/toon_shader.webp" alt="">
                             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
                         </a>
@@ -246,8 +245,9 @@
                     <div class="relative group hover transition-transform duration-200">
                         <iframe class="object-cover h-96 w-full aspect-video " title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
                     </div>
-                </content>
+            </content>
         </section>
+
         <!--UX-->
         <section>
             <!--Title-->
@@ -274,23 +274,20 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
         <script> Fancybox.bind("[data-fancybox]", {}); </script>
-
         <script>
-                const menuBtn = document.getElementById('menu-btn');
-                const closeBtn = document.getElementById('close-btn');
-                const fullScreenMenu = document.getElementById('full-screen-menu');
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const fullScreenMenu = document.getElementById('full-screen-menu');
 
-                // Deschide meniul
-                menuBtn.addEventListener('click', () => {
-                    fullScreenMenu.classList.remove('translate-x-full');
-                });
+            // Deschide meniul
+            menuBtn.addEventListener('click', () => {
+                fullScreenMenu.classList.remove('translate-x-full');
+            });
 
-                // Închide meniul
-                closeBtn.addEventListener('click', () => {
-                    fullScreenMenu.classList.add('translate-x-full');
-                });
-
-                
-            </script>
+            // Închide meniul
+            closeBtn.addEventListener('click', () => {
+                fullScreenMenu.classList.add('translate-x-full');
+            });
+        </script>
     </body>
 </html>

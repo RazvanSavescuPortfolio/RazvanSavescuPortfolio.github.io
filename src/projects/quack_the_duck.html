@@ -8,8 +8,7 @@
     <title>Document</title>
 </head>
     <body class="flex flex-col m-0 min-h-screen bg-slate-900 font-sans">
-
-        <nav class="sticky top-0 z-[100] animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-950 border-b border-slate-800 shadow-2xl shadow-black/60">
+        <nav class="sticky top-0 z-[100] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-950 border-b border-slate-800 shadow-2xl shadow-black/60">
 
             <!--NAME-->
             <a href="../../index.html" class="ml-2 flex items-center space-x-3 rtl:space-x-reverse text-gray-500">
@@ -122,12 +121,13 @@
 
         <section>
             <!--Title-->
-            <div class="relative border-b border-t border-slate-800 bg-slate-950 p-4">
+            <div class="flex items-center gap-6 p-4 w-full">
                     <h2 class="text-xl text-white">Quack the Duck</h2>
+                    <div class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
             </div>
             
             <!--Content-->
-            <content class="grid grid-cols-1 md:grid-cols-12 items-stretch animate-[flyin_0.5s_ease-out_forwards] bg-slate-950" id="3D"> 
+            <content class="grid grid-cols-1 md:grid-cols-12 items-stretch bg-slate-950" id="3D"> 
 
     <div class="md:col-span-4 text-white p-10 flex flex-col justify-center border-b border-slate-800 md:border-b-0">
         <div class="border-l border-fuchsia-500 pl-6 py-2">
@@ -162,23 +162,22 @@ collect peas and quack at enemies.</p>
 </content>
         </section>
 
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+        <script> Fancybox.bind("[data-fancybox]", {}); </script>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const closeBtn = document.getElementById('close-btn');
+            const fullScreenMenu = document.getElementById('full-screen-menu');
 
-            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
-            <script> Fancybox.bind("[data-fancybox]", {}); </script>
-            <script>
-                const menuBtn = document.getElementById('menu-btn');
-                const closeBtn = document.getElementById('close-btn');
-                const fullScreenMenu = document.getElementById('full-screen-menu');
+            // Deschide meniul
+            menuBtn.addEventListener('click', () => {
+                fullScreenMenu.classList.remove('translate-x-full');
+            });
 
-                // Deschide meniul
-                menuBtn.addEventListener('click', () => {
-                    fullScreenMenu.classList.remove('translate-x-full');
-                });
-
-                // Închide meniul
-                closeBtn.addEventListener('click', () => {
-                    fullScreenMenu.classList.add('translate-x-full');
-                });
-            </script>
+            // Închide meniul
+            closeBtn.addEventListener('click', () => {
+                fullScreenMenu.classList.add('translate-x-full');
+            });
+        </script>
     </body>
 </html>
