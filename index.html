@@ -1,293 +1,475 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth"> 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./src/output.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"/>
-        <title>Răzvan Savescu Portfolio</title>
-    </head>
-    <body class="flex flex-col m-0 min-h-screen font-sans relative bg-slate-900 ">
+<!doctype html>
+<html
+	lang="en"
+	class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<meta
+			property="og:image"
+			content="./images/hns/hns_cover.webp" />
+		<link
+			rel="stylesheet"
+			href="./src/output.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css" />
+		<title>Răzvan Savescu Portfolio</title>
+	</head>
+	<body class="flex flex-col m-0 min-h-screen font-sans relative bg-slate-900">
+		<!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch   -->
+		<!--NAV BAR-->
+		<nav
+			class="sticky top-0 z-[100] animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-950 border-b border-slate-800 shadow-2xl shadow-black/60">
+			<!--NAME-->
+			<a
+				href="index.html"
+				class="ml-2 flex items-center space-x-3 rtl:space-x-reverse text-gray-500">
+				<div class="relative group cursor-pointer inline-block pb-1">
+					<p class="transition-colors duration-300 group-hover:text-white">
+						RĂZVAN SAVESCU
+					</p>
+					<span
+						class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+				</div>
+			</a>
 
-        <!--npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch   -->
-        <!--NAV BAR-->
-        <nav class="sticky top-0 z-[100] animate-[flyin_0.5s_ease-out_forwards] text-gray-300 max-w-screen flex flex-wrap items-center justify-between font-medium bg-slate-950 border-b border-slate-800 shadow-2xl shadow-black/60">
+			<!--Mobile Menu-->
+			<section>
+				<button
+					id="menu-btn"
+					class="block md:hidden p-4 z-[100] text-white">
+					<svg
+						class="w-8 h-8"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+				<div
+					id="full-screen-menu"
+					class="fixed inset-0 bg-slate-950 z-[200] flex flex-col items-center justify-center space-y-8 text-2xl transition-transform duration-300 translate-x-full peer-checked:translate-x-0 md:hidden">
+					<button
+						id="close-btn"
+						class="absolute top-6 right-6 text-white text-4xl">
+						&times;
+					</button>
 
-            <!--NAME-->
-            <a href="index.html" class="ml-2 flex items-center space-x-3 rtl:space-x-reverse text-gray-500">
-                <div class="relative group cursor-pointer inline-block pb-1">
-                    <p class="transition-colors duration-300 group-hover:text-white">RĂZVAN SAVESCU</p>
-                    <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                </div>
-            </a>
+					<!--SOCIALS MOBILE-->
+					<div class="flex justify-end text-gray-300">
+						<ul
+							class="flex flex-col items-center gap-4 p-4 md:flex-row md:space-x-8 font-medium">
+							<li>
+								<a href="./src/projects/about.html">
+									<div
+										class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+										<p>ABOUT</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/razvan-savescu/">
+									<div
+										class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+										<p>LINKEDIN</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="https://sketchfab.com/razvansavescu/models">
+									<div
+										class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+										<p>SKETCHFAB</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.behance.net/razvansavescu">
+									<div
+										class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+										<p>BEHANCE</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.cgtrader.com/designers/friendlycapybara">
+									<div
+										class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
+										<p>CGTRADER</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!--SOCIALS PC-->
+			<div class="hidden md:flex justify-end text-gray-500">
+				<ul
+					class="flex flex-col items-center gap-4 p-4 md:flex-row md:space-x-8 font-medium">
+					<li>
+						<a href="src/projects/about.html">
+							<div class="relative group cursor-pointer inline-block pb-1">
+								<p
+									class="transition-colors duration-300 group-hover:text-white">
+									ABOUT
+								</p>
+								<span
+									class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/razvan-savescu/">
+							<div class="relative group cursor-pointer inline-block pb-1">
+								<p
+									class="transition-colors duration-300 group-hover:text-white">
+									LINKEDIN
+								</p>
+								<span
+									class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://sketchfab.com/razvansavescu/models">
+							<div class="relative group cursor-pointer inline-block pb-1">
+								<p
+									class="transition-colors duration-300 group-hover:text-white">
+									SKETCHFAB
+								</p>
+								<span
+									class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.behance.net/razvansavescu">
+							<div class="relative group cursor-pointer inline-block pb-1">
+								<p
+									class="transition-colors duration-300 group-hover:text-white">
+									BEHANCE
+								</p>
+								<span
+									class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.cgtrader.com/designers/friendlycapybara">
+							<div class="relative group cursor-pointer inline-block pb-1">
+								<p
+									class="transition-colors duration-300 group-hover:text-white">
+									CGTRADER
+								</p>
+								<span
+									class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--Projects-->
+		<section>
+			<!--Title-->
+			<div class="flex items-center gap-6 p-4 w-full">
+				<h2 class="text-xl text-white">Projects</h2>
+				<div
+					class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
+			</div>
+			<!--Content-->
+			<content
+				class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards]"
+				id="3D">
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						href="./src/projects/bachelors.html"
+						class="block">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/bachelors/project_1.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+							<span
+								class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+								Bachelor's Project
+							</span>
+						</div>
+					</a>
+				</div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						href="./src/projects/quack_the_duck.html"
+						class="block">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/quack_the_duck/quacktheduck_cover.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+							<span
+								class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+								Quack the Duck
+							</span>
+						</div>
+					</a>
+				</div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						href="./src/projects/hns.html"
+						class="block">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/hns/hns_cover.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+							<span
+								class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+								Hack & Slash
+							</span>
+						</div>
+					</a>
+				</div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						href="./src/projects/upway_turfers.html"
+						class="block">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/ut/ut4.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
+							<span
+								class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+								Upway Turfers
+							</span>
+						</div>
+					</a>
+				</div>
+			</content>
+		</section>
 
-            <!--Mobile Menu-->
-            <section>
-                <button id="menu-btn" class="block md:hidden p-4 z-[100] text-white">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-                <div id="full-screen-menu" class="fixed inset-0 bg-slate-950 z-[200] flex flex-col items-center justify-center space-y-8 text-2xl 
-                    transition-transform duration-300 translate-x-full 
-                    peer-checked:translate-x-0 md:hidden">
-                    <button id="close-btn" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+		<!--Artworks-->
+		<section>
+			<!--Title-->
+			<div class="flex items-center gap-6 p-4 w-full">
+				<h2 class="text-xl text-white">Artworks</h2>
+				<div
+					class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
+			</div>
+			<!--Content-->
+			<content
+				class="grid grid-cols-2 md:grid-cols-4"
+				id="3D">
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/Artwork_cubes.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/Artwork_cubes.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <!--SOCIALS MOBILE-->
-                    <div class="flex justify-end text-gray-300"> 
-                        <ul class="flex flex-col items-center gap-4 p-4 md:flex-row md:space-x-8 font-medium ">
-                            <li> 
-                                <a href="./src/projects/about.html">
-                                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                                        <p>ABOUT</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li> 
-                                <a href="https://www.linkedin.com/in/razvan-savescu/">
-                                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                                        <p>LINKEDIN</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li> 
-                                <a href="https://sketchfab.com/razvansavescu/models">
-                                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                                        <p>SKETCHFAB</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li> 
-                                <a href="https://www.behance.net/razvansavescu">
-                                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                                        <p>BEHANCE</p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li> 
-                                <a href="https://www.cgtrader.com/designers/friendlycapybara">
-                                    <div class="relative cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-300 before:absolute before:bg-gray-400 before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-400 after:absolute after:bg-gray-400 after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]">
-                                        <p>CGTRADER</p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!--SOCIALS PC-->
-            <div class="hidden md:flex justify-end text-gray-500 "> 
-                <ul class="flex flex-col items-center gap-4 p-4 md:flex-row md:space-x-8 font-medium ">
-                    <li> 
-                        <a href="src/projects/about.html">
-                            <div class="relative group cursor-pointer inline-block pb-1">
-                                <p class="transition-colors duration-300 group-hover:text-white">ABOUT</p>
-                                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="https://www.linkedin.com/in/razvan-savescu/">
-                            <div class="relative group cursor-pointer inline-block pb-1">
-                                <p class="transition-colors duration-300 group-hover:text-white">LINKEDIN</p>
-                                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="https://sketchfab.com/razvansavescu/models">
-                            <div class="relative group cursor-pointer inline-block pb-1">
-                                <p class="transition-colors duration-300 group-hover:text-white">SKETCHFAB</p>
-                                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="https://www.behance.net/razvansavescu">
-                            <div class="relative group cursor-pointer inline-block pb-1">
-                                <p class="transition-colors duration-300 group-hover:text-white">BEHANCE</p>
-                                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li> 
-                        <a href="https://www.cgtrader.com/designers/friendlycapybara">
-                            <div class="relative group cursor-pointer inline-block pb-1">
-                                <p class="transition-colors duration-300 group-hover:text-white">CGTRADER</p>
-                                <span class="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-400 to-fuchsia-500 transition-all duration-300 ease-in-out group-hover:w-full"></span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!--Projects-->
-        <section>
-            <!--Title-->
-            <div class="flex items-center gap-6 p-4 w-full">
-                    <h2 class="text-xl text-white">Projects</h2>
-                    <div class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
-            </div>
-            <!--Content-->
-            <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] " id="3D"> 
-                <div class="relative group hover transition-transform duration-200">
-                    <a href="./src/projects/bachelors.html" class="block">
-                    <img loading="lazy" class="object-cover h-96 w-full " src="./images/bachelors/project_1.webp" alt="">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                            <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Bachelor's Project
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="relative group hover transition-transform duration-200">
-                    <a href="./src/projects/quack_the_duck.html" class="block">
-                    <img loading="lazy" class="object-cover h-96 w-full " src="./images/quack_the_duck/quacktheduck_cover.webp" alt="">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                            <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Quack the Duck
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="relative group hover transition-transform duration-200">
-                    <a href="./src/projects/hns.html" class="block">
-                    <img loading="lazy" class="object-cover h-96 w-full " src="./images/hns/hns_cover.webp" alt="">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                            <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Hack & Slash
-                            </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="relative group hover transition-transform duration-200">
-                    <a href="./src/projects/upway_turfers.html" class="block">
-                    <img loading="lazy" class="object-cover h-96 w-full " src="./images/ut/ut4.webp" alt="">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                            <span class="text-white text-xl font-bold tracking-wide transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                Upway Turfers
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </content>
-        </section>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/Artwork_cyber_girl.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/Artwork_cyber_girl.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-        <!--Artworks-->
-        <section>
-            <!--Title-->
-            <div class="flex items-center gap-6 p-4 w-full">
-                    <h2 class="text-xl text-white">Artworks</h2>
-                    <div class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
-            </div>
-            <!--Content-->
-            <content class="grid grid-cols-2 md:grid-cols-4" id="3D"> 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/Artwork_cubes.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cubes.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/artwork_girl.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/artwork_girl.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b"href="./images/Artwork_cyber_girl.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_cyber_girl.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/Artwork_heart.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/Artwork_heart.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/artwork_girl.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_girl.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/Artwork_shadows.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/Artwork_shadows.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/Artwork_heart.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_heart.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/artwork_spirall.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/artwork_spirall.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/Artwork_shadows.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_shadows.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/Artwork_stylized_core.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/Artwork_stylized_core.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/artwork_spirall.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/artwork_spirall.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<a
+						data-fancybox="b"
+						href="./images/toon_shader.webp">
+						<img
+							loading="lazy"
+							class="object-cover h-96 w-full"
+							src="./images/toon_shader.webp"
+							alt="" />
+						<div
+							class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
+					</a>
+				</div>
+				<!--Sketchfab-->
+				<div class="relative group hover transition-transform duration-200">
+					<iframe
+						class="object-cover h-96 w-full aspect-video"
+						title="Sci-fi Girl"
+						frameborder="0"
+						allowfullscreen
+						mozallowfullscreen="true"
+						webkitallowfullscreen="true"
+						allow="autoplay; fullscreen; xr-spatial-tracking"
+						xr-spatial-tracking
+						execution-while-out-of-viewport
+						execution-while-not-rendered
+						web-share
+						src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed">
+					</iframe>
+				</div>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/Artwork_stylized_core.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/Artwork_stylized_core.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
+				<div class="relative group hover transition-transform duration-200">
+					<iframe
+						class="object-cover h-96 w-full aspect-video"
+						title="Assets Pack"
+						allowfullscreen
+						mozallowfullscreen="true"
+						webkitallowfullscreen="true"
+						allow="autoplay; fullscreen; xr-spatial-tracking"
+						xr-spatial-tracking
+						execution-while-out-of-viewport
+						execution-while-not-rendered
+						web-share
+						src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
+				</div>
+			</content>
+		</section>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <a data-fancybox="b" href="./images/toon_shader.webp">
-                            <img loading="lazy" class="object-cover h-96 w-full " src="./images/toon_shader.webp" alt="">
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none"></div>
-                        </a>
-                    </div>
-                    <!--Sketchfab-->
-                    <div class="relative group hover transition-transform duration-200">
-                        <iframe class="object-cover h-96 w-full aspect-video " title="Sci-fi Girl" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2a6437ddc7184b4c9c4483fe54c1d1a2/embed"> </iframe>
-                    </div>
+		<!--UX-->
+		<section>
+			<!--Title-->
+			<div class="flex items-center gap-6 p-4 w-full">
+				<h2 class="text-xl text-white">UX</h2>
+				<div
+					class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
+			</div>
+			<!--Content-->
+			<content
+				class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] rounded-none overflow-hidden"
+				id="ux">
+				<div class="overflow-hidden rounded-none">
+					<iframe
+						class="object-cover h-96 w-full aspect-video scale-102"
+						src="https://www.behance.net/embed/project/231328305?ilo0=1"
+						height="500"
+						scrolling="no">
+					</iframe>
+				</div>
+				<div class="overflow-hidden rounded-none">
+					<iframe
+						class="object-cover h-96 w-full aspect-video scale-102"
+						src="https://www.behance.net/embed/project/237519189?ilo0=1"
+						scrolling="no">
+					</iframe>
+				</div>
+			</content>
+		</section>
 
-                    <div class="relative group hover transition-transform duration-200">
-                        <iframe class="object-cover h-96 w-full aspect-video " title="Assets Pack" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f673ffe659924f62bca7fc2cc9f69602/embed"></iframe>
-                    </div>
-            </content>
-        </section>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
+		<script>
+			Fancybox.bind("[data-fancybox]", {});
+		</script>
+		<script>
+			const menuBtn = document.getElementById("menu-btn");
+			const closeBtn = document.getElementById("close-btn");
+			const fullScreenMenu = document.getElementById("full-screen-menu");
 
-        <!--UX-->
-        <section>
-            <!--Title-->
-            <div class="flex items-center gap-6 p-4 w-full">
-                    <h2 class="text-xl text-white">UX</h2>
-                    <div class="h-[1px] flex-1 bg-gradient-to-r from-fuchsia-500/50 via-slate-700/50 to-transparent"></div>
-            </div>
-            <!--Content-->
-            <content class="grid grid-cols-2 md:grid-cols-4 animate-[flyin_0.5s_ease-out_forwards] rounded-none overflow-hidden" id="ux"> 
-                <div class="overflow-hidden rounded-none">
-                    <iframe class="object-cover h-96 w-full aspect-video scale-102" 
-                    src="https://www.behance.net/embed/project/231328305?ilo0=1" 
-                    height="500" scrolling="no">
-                    </iframe>
-                </div>    
-                <div class="overflow-hidden rounded-none">
-                    <iframe class="object-cover h-96 w-full aspect-video scale-102" 
-                    src="https://www.behance.net/embed/project/237519189?ilo0=1" 
-                    scrolling="no">
-                    </iframe>
-                </div>
-            </content>
-        </section>
+			// Deschide meniul
+			menuBtn.addEventListener("click", () => {
+				fullScreenMenu.classList.remove("translate-x-full");
+			});
 
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
-        <script> Fancybox.bind("[data-fancybox]", {}); </script>
-        <script>
-            const menuBtn = document.getElementById('menu-btn');
-            const closeBtn = document.getElementById('close-btn');
-            const fullScreenMenu = document.getElementById('full-screen-menu');
-
-            // Deschide meniul
-            menuBtn.addEventListener('click', () => {
-                fullScreenMenu.classList.remove('translate-x-full');
-            });
-
-            // Închide meniul
-            closeBtn.addEventListener('click', () => {
-                fullScreenMenu.classList.add('translate-x-full');
-            });
-        </script>
-    </body>
+			// Închide meniul
+			closeBtn.addEventListener("click", () => {
+				fullScreenMenu.classList.add("translate-x-full");
+			});
+		</script>
+	</body>
 </html>
